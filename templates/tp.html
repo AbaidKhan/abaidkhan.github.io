@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{font-family:Verdana,sans-serif;}
+			#colors{color:#42B5F5;}
+            .main_container{margin-left:-8px;margin-top:-8px;margin-right:-8.4px;}
+            #main_container{background-color:none;color:#42B5F5;}
+                .head_container{padding-right:7px;height:70px;position:fixed;border:1px solid #d3d3d3;box-shadow:-2px -1px 8px black;}
+                #head_container{background-color:white;}
+                    .logo{height:100%;width:185px;background-image:url('static/logo.png');background-size:70px;background-repeat:no-repeat;margin-left:120px;margin-top:18px;}
+                    .list{margin-left:680px;margin-top:-80px;width:700px;border:black;padding-left:-9px}
+                    li{font-size:18px;display:inline;padding:15px;}
+                .second_container{padding-top:80px;}
+                    .button{height:50px;width:200px;font-size:20px:border:none;background-color:#8DEDFD;border-radius:5px;}
+    </style>
+</head>
+<body>
+    <div class="main_container" id="main_container">
+		<div class="head_container" id="head_container">
+            <div class="logo"></div>
+            <div class="list">
+                <ul>
+                    <a class="ref" style="text-decoration:none;color:black;" href="one.html"><li> Home </li></a>
+                    <a class="ref" style="text-decoration:none;color:black;" href="about.html"><li> About</li></a>
+                    <a class="ref" style="text-decoration:none;color:black;" href="contact.html"><li>Contact</li></a>
+                    <a class="ref" style="text-decoration:none;color:black;" href="help.html"><li> Help</li></a>
+                </ul>
+            </div>
+        </div>
+        <center>
+            <div class="second_container">
+                <div id="camera">
+                    <img src="{{ url_for('camopen') }}" alt="video feed" style="border:1px solid #8DEDFD">
+                </div>
+                <div id="btns-div">
+                    <a href="{{ url_for('tk_img') }}"><input type="button" value="Take Picture" class="button"/></a>
+                </div>
+            </div>
+        </center>
+	</div>
+</body>
+</html>
